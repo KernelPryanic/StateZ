@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3B2AF35B-1121-433F-AE6C-74F1D7D9E25A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>StateZ</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NativeUI">
+      <HintPath>..\NativeUI\bin\x64\Release\NativeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptHookVDotNet2">
+      <HintPath>..\ScriptHookV_Net\ScriptHookVDotNet2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateZ.Controllers\EventTypes.cs" />
+    <Compile Include="StateZ.Controllers\SurvivorController.cs" />
+    <Compile Include="StateZ.Controllers\WorldController.cs" />
+    <Compile Include="StateZ.DataClasses\ItemPreview.cs" />
+    <Compile Include="StateZ.DataClasses\ParticleEffect.cs" />
+    <Compile Include="StateZ.DataClasses\SpawnBlocker.cs" />
+    <Compile Include="StateZ.DataClasses\Survivors.cs" />
+    <Compile Include="StateZ.Extensions\Alertness.cs" />
+    <Compile Include="StateZ.Extensions\CombatAbility.cs" />
+    <Compile Include="StateZ.Extensions\CombatAttributes.cs" />
+    <Compile Include="StateZ.Extensions\CombatMovement.cs" />
+    <Compile Include="StateZ.Extensions\CombatRange.cs" />
+    <Compile Include="StateZ.Extensions\ComponentId.cs" />
+    <Compile Include="StateZ.Extensions\ConfigFlags.cs" />
+    <Compile Include="StateZ.Extensions\DamagePack.cs" />
+    <Compile Include="StateZ.Extensions\DoorState.cs" />
+    <Compile Include="StateZ.Extensions\EntityExtended.cs" />
+    <Compile Include="StateZ.Extensions\FirendlyFireType.cs" />
+    <Compile Include="StateZ.Extensions\GameExtended.cs" />
+    <Compile Include="StateZ.Extensions\PedExtended.cs" />
+    <Compile Include="StateZ.Extensions\PlayerExtended.cs" />
+    <Compile Include="StateZ.Extensions\PropExt.cs" />
+    <Compile Include="StateZ.Extensions\RandomExtensions.cs" />
+    <Compile Include="StateZ.Extensions\ScriptExtended.cs" />
+    <Compile Include="StateZ.Extensions\SpeechModifier.cs" />
+    <Compile Include="StateZ.Extensions\Subtask.cs" />
+    <Compile Include="StateZ.Extensions\SystemExtended.cs" />
+    <Compile Include="StateZ.Extensions\UiExtended.cs" />
+    <Compile Include="StateZ.Extensions\V3Extended.cs" />
+    <Compile Include="StateZ.Extensions\VehicleExtended.cs" />
+    <Compile Include="StateZ.Extensions\WorldExtended.cs" />
+    <Compile Include="StateZ.PlayerManagement\LootPickupType.cs" />
+    <Compile Include="StateZ.PlayerManagement\PedTask.cs" />
+    <Compile Include="StateZ.PlayerManagement\PlayerGroupManager.cs" />
+    <Compile Include="StateZ.PlayerManagement\PlayerInventory.cs" />
+    <Compile Include="StateZ.PlayerManagement\PlayerMap.cs" />
+    <Compile Include="StateZ.PlayerManagement\PlayerStats.cs" />
+    <Compile Include="StateZ.PlayerManagement\PlayerVehicles.cs" />
+    <Compile Include="StateZ.PlayerManagement\StatDisplayItem.cs" />
+    <Compile Include="StateZ.Scripts\AnimalSpawner.cs" />
+    <Compile Include="StateZ.Scripts\Loot247.cs" />
+    <Compile Include="StateZ.Scripts\MapInteraction.cs" />
+    <Compile Include="StateZ.Scripts\RecruitPeds.cs" />
+    <Compile Include="StateZ.Scripts\ScriptEventHandler.cs" />
+    <Compile Include="StateZ.Scripts\VehicleRepair.cs" />
+    <Compile Include="StateZ.Scripts\ZombieCreator.cs" />
+    <Compile Include="StateZ.Scripts\ZombieVehicleSpawner.cs" />
+    <Compile Include="StateZ.Static\Config.cs" />
+    <Compile Include="StateZ.Static\Database.cs" />
+    <Compile Include="StateZ.Static\MenuConrtoller.cs" />
+    <Compile Include="StateZ.Static\Relationships.cs" />
+    <Compile Include="StateZ.Static\Serializer.cs" />
+    <Compile Include="StateZ.SurvivorTypes\FriendlySurvivors.cs" />
+    <Compile Include="StateZ.SurvivorTypes\HostileSurvivors.cs" />
+    <Compile Include="StateZ.SurvivorTypes\MerryweatherSurvivors.cs" />
+    <Compile Include="StateZ.Wrappers\EntityEventWrapper.cs" />
+    <Compile Include="StateZ.Zombies.ZombieTypes\Runner.cs" />
+    <Compile Include="StateZ.Zombies.ZombieTypes\Walker.cs" />
+    <Compile Include="StateZ.Zombies\ZombiePed.cs" />
+    <Compile Include="StateZ\BuildableInventoryItem.cs" />
+    <Compile Include="StateZ\Constants.cs" />
+    <Compile Include="StateZ\CraftableInventoryItem.cs" />
+    <Compile Include="StateZ\CraftableItemComponent.cs" />
+    <Compile Include="StateZ\FoodInventoryItem.cs" />
+    <Compile Include="StateZ\FoodType.cs" />
+    <Compile Include="StateZ\IAnimatable.cs" />
+    <Compile Include="StateZ\ICraftable.cs" />
+    <Compile Include="StateZ\IDeletable.cs" />
+    <Compile Include="StateZ\IFood.cs" />
+    <Compile Include="StateZ\IIdentifier.cs" />
+    <Compile Include="StateZ\IInteractable.cs" />
+    <Compile Include="StateZ\IMapObject.cs" />
+    <Compile Include="StateZ\Inventory.cs" />
+    <Compile Include="StateZ\InventoryItemBase.cs" />
+    <Compile Include="StateZ\IProp.cs" />
+    <Compile Include="StateZ\ISpawner.cs" />
+    <Compile Include="StateZ\ItemEvent.cs" />
+    <Compile Include="StateZ\ItemType.cs" />
+    <Compile Include="StateZ\IUpdatable.cs" />
+    <Compile Include="StateZ\IValidatable.cs" />
+    <Compile Include="StateZ\IWeapon.cs" />
+    <Compile Include="StateZ\Map.cs" />
+    <Compile Include="StateZ\MapProp.cs" />
+    <Compile Include="StateZ\MenuType.cs" />
+    <Compile Include="StateZ\ModController.cs" />
+    <Compile Include="StateZ\NearbyResource.cs" />
+    <Compile Include="StateZ\PedCollection.cs" />
+    <Compile Include="StateZ\PedData.cs" />
+    <Compile Include="StateZ\Stat.cs" />
+    <Compile Include="StateZ\Stats.cs" />
+    <Compile Include="StateZ\UsableInventoryItem.cs" />
+    <Compile Include="StateZ\UsableItemEvent.cs" />
+    <Compile Include="StateZ\VehicleCollection.cs" />
+    <Compile Include="StateZ\VehicleData.cs" />
+    <Compile Include="StateZ\Weapon.cs" />
+    <Compile Include="StateZ\WeaponInventoryItem.cs" />
+    <Compile Include="StateZ\WeaponStorageInventoryItem.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
